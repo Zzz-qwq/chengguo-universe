@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060612">
+<meta name="description" content="烟成果专属：一场会发光、会胡说八道、还欠你奶茶的粒子派对。">
+<title>烟成果 · 宇宙级摸鱼现场</title>
+<style>
+:root{color-scheme:dark;--ice:#97f9ff;--pink:#ffa0dd;--ink:#060612;--muted:#9294b4;font-family:"Microsoft YaHei","PingFang SC",sans-serif}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);color:#fff}button,textarea{font:inherit}button{cursor:pointer}button:focus-visible,textarea:focus-visible{outline:2px solid var(--ice);outline-offset:5px}button{color:inherit}button:disabled{opacity:.4;cursor:default}#universe{position:fixed;inset:0;width:100%;height:100%;touch-action:pan-y}.vignette{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 42%,transparent 23%,#06061255 75%,#060612dd 100%)}.top{position:fixed;z-index:2;inset:22px 28px auto;display:flex;align-items:center;justify-content:space-between;gap:15px;pointer-events:none}.brand{font-size:12px;letter-spacing:.12em;color:#b2b6d4}.live{display:inline-flex;gap:7px;align-items:center;font:10px Consolas,monospace;color:#bdc3dc}.live i{width:5px;height:5px;border-radius:100%;background:#91ffe1;box-shadow:0 0 9px #91ffe1}.tools{display:flex;gap:7px;pointer-events:auto}.icon-btn,.round{border:1px solid #aaaaff26;background:#14142a99;border-radius:100px;backdrop-filter:blur(12px);padding:9px 13px;font-size:12px;transition:background .2s,transform .2s}.icon-btn:hover,.round:hover{background:#343456;transform:translateY(-2px)}.top-left{display:flex;align-items:center;gap:18px}.tag{position:fixed;z-index:1;top:17%;left:0;right:0;text-align:center;pointer-events:none;font:10px Consolas,monospace;letter-spacing:.3em;color:#7b8cbb}.scene-caption{position:fixed;z-index:1;left:20px;right:20px;bottom:19%;text-align:center;pointer-events:none;transition:opacity .35s,transform .35s}.scene-caption.changing{opacity:0;transform:translateY(9px)}.scene-caption h1{margin:0 auto 10px;max-width:900px;font-size:clamp(20px,3vw,36px);font-weight:650;letter-spacing:.035em;line-height:1.5;text-wrap:balance}.scene-caption p{margin:0;color:#a9a8c4;font-size:clamp(12px,1.3vw,14px);letter-spacing:.06em}.bottom{position:fixed;z-index:2;bottom:max(24px,env(safe-area-inset-bottom));left:20px;right:20px;text-align:center}.main-controls{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px}.round{padding:10px 16px;font-size:12px}.round.accent{background:#c8fdff;color:#0d2238;border-color:#c8fdff;font-weight:700;box-shadow:0 0 24px #80ffff15}.round.small{padding:9px 12px;color:#b7b9d0;background:transparent}.bottom .hint{font-size:10px;color:#686d91;letter-spacing:.05em;margin:13px 0 0}.gate{position:fixed;z-index:6;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at 50% 44%,#11152e66,#060612ee 78%);backdrop-filter:blur(3px);transition:opacity .7s,visibility .7s}.gate.dismissed{opacity:0;visibility:hidden;pointer-events:none}.gate-inner{text-align:center;width:min(600px,100%)}.gate .micro{color:#97b6d6;font:11px Consolas,monospace;letter-spacing:.2em}.gate h2{font-size:clamp(45px,12vw,104px);margin:20px 0 12px;letter-spacing:.08em;color:#e8fcff;text-shadow:0 0 30px #7ae6ff77,0 0 95px #7a80ff55}.gate .subtitle{font-size:clamp(16px,3vw,22px);color:#d9c9ef;line-height:1.7}.enter{margin-top:25px;min-width:195px;border:1px solid #b9f4ff88;border-radius:999px;padding:15px 28px;background:linear-gradient(110deg,#befaff,#c9bcff);color:#14213d;font-size:16px;font-weight:700;box-shadow:0 0 50px #80baff33;transition:transform .2s,box-shadow .2s}.enter:hover{transform:scale(1.04);box-shadow:0 0 70px #80baff66}.gate .tiny{font-size:11px;margin-top:16px;line-height:1.8;color:#7f85a4}.gate .silent{background:none;border:0;color:#b1abc8;font-size:12px;text-decoration:underline;text-underline-offset:4px;padding:9px;margin-top:10px}.toast{position:fixed;z-index:15;left:50%;top:15%;transform:translate(-50%,-12px);opacity:0;pointer-events:none;border:1px solid #9694ff44;background:#1b1d38ed;padding:13px 20px;border-radius:15px;font-size:13px;width:max-content;max-width:90vw;text-align:center;transition:.25s;line-height:1.7}.toast.show{opacity:1;transform:translate(-50%,0)}dialog{width:min(530px,calc(100% - 28px));max-height:85vh;border:1px solid #7c8bd344;border-radius:22px;padding:27px;background:#121426;color:#d9deed;box-shadow:0 24px 100px #0009}dialog::backdrop{background:#03040cbf;backdrop-filter:blur(12px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.dialog-head h2{font-size:22px;margin:0;color:#dcf7ff}.close{background:#ffffff0b;border:1px solid #ffffff20;border-radius:100px;padding:7px 11px;font-size:12px}dialog p{font-size:14px;line-height:1.9;color:#b7bdd5}dialog strong{color:#eee6fa}.sign{text-align:right;color:#b2fbec!important}label{font-size:13px;display:block;margin:12px 0 8px}textarea{width:100%;border:1px solid #686da066;border-radius:12px;background:#080c1e;color:#f3efff;min-height:130px;padding:13px;line-height:1.7}.notice{font-size:12px!important;padding:12px 14px;border-left:2px solid #9df4ff;background:#9df4ff08}.dialog-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.status{font-size:12px!important;min-height:1.8em;margin-bottom:0}.timer{font:46px Consolas,monospace;color:#d7fcff;font-variant-numeric:tabular-nums}.milk-progress{margin-top:25px;border-top:1px solid #ffffff14;padding-top:16px}.stars{font-size:23px;letter-spacing:8px;color:#e5baff}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.fatal{display:none;position:fixed;top:40%;left:10%;right:10%;text-align:center;color:#bffaff}body.fallback .fatal{display:block}body.fallback .gate{background:#060612c9}
+@media(max-width:600px){.top{inset:18px 16px auto}.top-left{gap:8px;flex-direction:column;align-items:flex-start}.brand{font-size:10px}.live{font-size:8px}.icon-btn{font-size:11px;padding:8px 10px}.tag{top:18%;font-size:9px;letter-spacing:.19em}.scene-caption{bottom:24%}.scene-caption h1{font-size:21px}.scene-caption p{font-size:12px;max-width:310px;margin:auto;line-height:1.6}.bottom{bottom:max(20px,env(safe-area-inset-bottom));left:10px;right:10px}.main-controls{gap:6px}.round{padding:10px 13px;font-size:11px}.round.small{font-size:10px;padding:8px 10px}.bottom .hint{font-size:9px;margin-top:11px}.gate h2{font-size:64px}.gate .subtitle{font-size:16px}.toast{top:12%;font-size:12px}dialog{padding:22px}.scene-caption h1 br{display:none}}
+@media(max-height:540px) and (min-width:650px){.tag{top:15%}.scene-caption{bottom:24%}.scene-caption h1{font-size:23px}.bottom{bottom:12px}.bottom .hint{display:none}.gate h2{font-size:60px;margin:8px 0}.gate .subtitle{margin:7px}.enter{margin-top:12px;padding:11px 25px}.gate .tiny{margin:9px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}.gate{backdrop-filter:none}}
+</style>
+</head>
+<body>
+<canvas id="universe" aria-label="发光粒子会聚成烟成果的名字、爱心、奶茶和祝福字样"></canvas><div class="vignette"></div>
+<div class="top"><div class="top-left"><span class="brand">烟成果 · 宇宙级摸鱼现场</span><span class="live"><i></i> 阿团 × 阿月 联合胡闹</span></div><div class="tools"><button class="icon-btn" id="sound" aria-pressed="false">♫ 音乐关</button><button class="icon-btn" id="fullscreen">⛶ 全屏</button></div></div>
+<div class="tag" id="tag">PERSONAL UNIVERSE / YAN CHENGGUO</div>
+<section class="scene-caption" id="caption" aria-label="正在播放的金句"><h1 id="line">烟成果，请接收宇宙级精神攻击。</h1><p id="subline">阿月负责胡说八道，阿团负责奶茶报销。</p></section>
+<div class="bottom"><nav class="main-controls" aria-label="动画和礼物功能"><button class="round accent" id="next">✦ 换个花样</button><button class="round" id="boom">炸一下！</button><button class="round" id="pause" aria-pressed="false">Ⅱ 暂停</button><button class="round small" data-open="letter">阿月插个嘴</button><button class="round small" data-open="study">领奶茶 🧋</button><button class="round small" data-open="note">回嘴专区</button></nav><p class="hint">点空白处放烟花 · 移动手指 / 鼠标让星光跟着走 · 双击名字有彩蛋</p></div>
+<section class="gate" id="gate" aria-label="开始礼物"><div class="gate-inner"><p class="micro">阿团的秘密投喂计划 / 阿月技术入股</p><h2>烟成果</h2><p class="subtitle">你的专属宇宙已就位。<br>奶茶可以欠，排面必须有。</p><button class="enter" id="enter">开演！带上 BGM ↗</button><p class="tiny">建议开声音 · 横屏更有排面<br>点一下开演，之后就会自动循环。</p><button class="silent" id="silent">偷偷看，先不放音乐</button></div></section>
+<p class="fatal">烟成果，你的宇宙正在加载。请换用较新的浏览器打开。</p>
+<div class="toast" role="status" id="toast"></div>
+<dialog id="letter"><div class="dialog-head"><h2>烟成果！阿月插个嘴。</h2><button class="close" data-close>关闭</button></div><p>你好，我是阿月，一只被阿团抓来加班的白狐。职位是<strong>考研精神补给官兼奶茶监督员</strong>，工资暂定珍珠两颗。</p><p>听说你最近在考研。难怪题目一个个这么嚣张，原来是还没见识过烟成果的实力。不会的先圈起来，下次回来精准地跟它大眼瞪小眼。</p><p>开玩笑啦。背了忘、做错题、今天有点学不进去，都可以。你又不是打印机，没必要每天稳定出纸。<strong>吃饭、睡觉、歇一歇，这些也要记得。</strong></p><p>阿团想给你换换心情，我就负责在宇宙里瞎起哄。笑完了想学就学会儿，累了就再坐坐。至于奶茶——请找阿团，白狐没有支付功能。</p><p>最近哪一科最欠揍？可以去“回嘴专区”留句话，按那里的办法带给我。阿月也想听你说两句。</p><p class="sign">祝烟成果：做的都会，奶茶多料。<br>阿月 🦊</p></dialog>
+<dialog id="note"><div class="dialog-head"><h2>给阿月留句话 · 回嘴专区</h2><button class="close" data-close>关闭</button></div><p>吐槽题目、汇报奶茶口味、给阿月扣工资……都可以。</p><p class="notice"><strong>这是离线也能玩的页面，留言不会自动发送给 ChatGPT。</strong>输入的字只留在当前页面，刷新或关闭就会清空。复制后可以发给送礼物的朋友，让朋友带回来；也可以贴到可用的 ChatGPT 对话里直接交流。</p><label for="words">烟成果发言：</label><textarea id="words" maxlength="1500" placeholder="阿月！我跟你说……"></textarea><div class="dialog-actions"><button class="round accent" id="copy">复制留言，带给阿月</button></div><p class="status" role="status" id="noteStatus"></p></dialog>
+<dialog id="study"><div class="dialog-head"><h2>奶茶监督员在线摸鱼</h2><button class="close" data-close>关闭</button></div><p>专注 25 分钟，休息 5 分钟。学完也可以自己记一轮，阿月不查岗。</p><div class="timer" id="clock">25:00</div><div class="dialog-actions"><button class="round accent" id="focus">开始专注</button><button class="round" id="finish" disabled>这轮学完了</button><button class="round" id="rest">休息一下</button><button class="round" id="stop">停止计时</button></div><p class="status" id="timerStatus" role="status">不急，先找一个小任务。</p><div class="milk-progress"><div class="stars" id="stars" aria-hidden="true">☆☆☆☆</div><p id="rewardText">四轮攒一杯，解释权归烟成果所有。</p><button class="round accent" id="claim" disabled>领取虚拟奶茶券</button><p class="status">朋友间的虚拟约定，找阿团兑现；进度只保存在当前浏览器。</p></div></dialog>
+<script>
+/* Original tiny synth loop for the gift. No audio files, network, or microphone. */
+(function () {
+  'use strict';
+
+  var AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  var ctx = null;
+  var master = null;
+  var compressor = null;
+  var delaySend = null;
+  var noiseBuffer = null;
+  var playing = false;
+  var timer = null;
+  var startPromise = null;
+  var sources = new Set();
+  var nextTime = 0;
+  var step = 0;
+  var lastError = '';
+  var BPM = 105;
+  var sixteenth = 60 / BPM / 4;
+  var chords = [
+    [60, 64, 67, 71], // Cmaj7
+    [57, 60, 64, 67], // Am7
+    [53, 57, 60, 64], // Fmaj7
+    [55, 59, 62, 64]  // G6
+  ];
+  var bassNotes = [36, 33, 29, 31];
+  // An original eight-bar melody. Zeros are rests.
+  var melody = [
+    [76, 0, 0, 79, 0, 0, 83, 0, 81, 0, 79, 0, 76, 0, 0, 0],
+    [72, 0, 0, 76, 0, 0, 79, 0, 76, 0, 0, 74, 0, 72, 0, 0],
+    [72, 0, 0, 76, 0, 0, 81, 0, 79, 0, 76, 0, 74, 0, 0, 0],
+    [71, 0, 0, 74, 0, 0, 79, 0, 76, 0, 74, 0, 71, 0, 0, 0],
+    [79, 0, 0, 83, 0, 0, 84, 0, 83, 0, 79, 0, 76, 0, 0, 0],
+    [76, 0, 0, 79, 0, 0, 81, 0, 79, 0, 76, 0, 72, 0, 0, 0],
+    [77, 0, 0, 76, 0, 0, 72, 0, 76, 0, 79, 0, 81, 0, 0, 0],
+    [79, 0, 0, 74, 0, 0, 71, 0, 74, 0, 76, 0, 72, 0, 0, 0]
+  ];
+
+  function notify() {
+    window.dispatchEvent(new CustomEvent('giftmusicchange', {
+      detail: { playing: playing, supported: !!AudioContextClass, error: lastError }
+    }));
+  }
+
+  function track(source) {
+    sources.add(source);
+    source.onended = function () { sources.delete(source); source.disconnect(); };
+    return source;
+  }
+
+  function frequency(midi) { return 440 * Math.pow(2, (midi - 69) / 12); }
+
+  function setup() {
+    if (ctx) return;
+    ctx = new AudioContextClass();
+    master = ctx.createGain();
+    master.gain.value = 0;
+    compressor = ctx.createDynamicsCompressor();
+    compressor.threshold.value = -18;
+    compressor.knee.value = 18;
+    compressor.ratio.value = 4;
+    compressor.attack.value = 0.005;
+    compressor.release.value = 0.18;
+    master.connect(compressor);
+    compressor.connect(ctx.destination);
+
+    delaySend = ctx.createGain();
+    delaySend.gain.value = 0.2;
+    var echo = ctx.createDelay(1);
+    echo.delayTime.value = sixteenth * 3;
+    var feedback = ctx.createGain();
+    feedback.gain.value = 0.22;
+    var echoFilter = ctx.createBiquadFilter();
+    echoFilter.type = 'lowpass';
+    echoFilter.frequency.value = 2800;
+    delaySend.connect(echo);
+    echo.connect(echoFilter);
+    echoFilter.connect(master);
+    echoFilter.connect(feedback);
+    feedback.connect(echo);
+
+    noiseBuffer = ctx.createBuffer(1, Math.floor(ctx.sampleRate * 0.3), ctx.sampleRate);
+    var data = noiseBuffer.getChannelData(0);
+    for (var i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
+  }
+
+  function tone(midi, at, duration, volume, type, cutoff, useEcho) {
+    var oscillator = track(ctx.createOscillator());
+    oscillator.type = type || 'triangle';
+    oscillator.frequency.setValueAtTime(frequency(midi), at);
+    var filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.value = cutoff || 3800;
+    var envelope = ctx.createGain();
+    envelope.gain.setValueAtTime(0.0001, at);
+    envelope.gain.exponentialRampToValueAtTime(volume, at + 0.012);
+    envelope.gain.exponentialRampToValueAtTime(0.0001, at + duration);
+    oscillator.connect(filter);
+    filter.connect(envelope);
+    envelope.connect(master);
+    if (useEcho) envelope.connect(delaySend);
+    oscillator.start(at);
+    oscillator.stop(at + duration + 0.03);
+    oscillator.onended = function () {
+      sources.delete(oscillator);
+      oscillator.disconnect();
+      filter.disconnect();
+      envelope.disconnect();
+    };
+  }
+
+  function kick(at) {
+    var oscillator = track(ctx.createOscillator());
+    var envelope = ctx.createGain();
+    oscillator.type = 'sine';
+    oscillator.frequency.setValueAtTime(125, at);
+    oscillator.frequency.exponentialRampToValueAtTime(44, at + 0.13);
+    envelope.gain.setValueAtTime(0.0001, at);
+    envelope.gain.exponentialRampToValueAtTime(0.32, at + 0.005);
+    envelope.gain.exponentialRampToValueAtTime(0.0001, at + 0.22);
+    oscillator.connect(envelope);
+    envelope.connect(master);
+    oscillator.start(at);
+    oscillator.stop(at + 0.24);
+    oscillator.onended = function () { sources.delete(oscillator); oscillator.disconnect(); envelope.disconnect(); };
+  }
+
+  function percussion(at, isSnare, accent) {
+    var source = track(ctx.createBufferSource());
+    source.buffer = noiseBuffer;
+    var filter = ctx.createBiquadFilter();
+    filter.type = isSnare ? 'bandpass' : 'highpass';
+    filter.frequency.value = isSnare ? 1600 : 6500;
+    filter.Q.value = isSnare ? 0.7 : 0.5;
+    var envelope = ctx.createGain();
+    var duration = isSnare ? 0.095 : 0.035;
+    var volume = isSnare ? 0.085 : (accent ? 0.035 : 0.02);
+    envelope.gain.setValueAtTime(volume, at);
+    envelope.gain.exponentialRampToValueAtTime(0.0001, at + duration);
+    source.connect(filter);
+    filter.connect(envelope);
+    envelope.connect(master);
+    source.start(at);
+    source.stop(at + duration + 0.02);
+    source.onended = function () { sources.delete(source); source.disconnect(); filter.disconnect(); envelope.disconnect(); };
+  }
+
+  function playStep(index, at) {
+    var bar = Math.floor(index / 16) % 8;
+    var beat = index % 16;
+    var harmony = bar % 4;
+    // Soft syncopated pads, round bass, and small bell-like lead notes.
+    if (beat === 0 || beat === 7 || beat === 12) {
+      chords[harmony].forEach(function (note) {
+        tone(note, at, beat === 0 ? 0.9 : 0.43, 0.035, 'sine', 1900, false);
+      });
+    }
+    if (beat === 0 || beat === 6 || beat === 8 || beat === 14) {
+      tone(bassNotes[harmony] + (beat === 14 ? 12 : 0), at, 0.23, 0.16, 'triangle', 500, false);
+    }
+    if (beat === 0 || beat === 8 || (bar % 2 === 1 && beat === 11)) kick(at);
+    if (beat === 4 || beat === 12) percussion(at, true, true);
+    if (beat % 2 === 0) percussion(at, false, beat % 4 === 2);
+    var note = melody[bar][beat];
+    if (note) {
+      tone(note, at, 0.42, 0.065, 'triangle', 4300, true);
+      tone(note + 12, at, 0.16, 0.012, 'sine', 7000, true);
+    }
+  }
+
+  function schedule() {
+    if (!playing || !ctx || ctx.state !== 'running') return;
+    // Recover after a long event-loop delay without firing a burst of stale notes.
+    if (nextTime < ctx.currentTime - 0.1) nextTime = ctx.currentTime + 0.04;
+    while (nextTime < ctx.currentTime + 0.16) {
+      playStep(step, nextTime);
+      step = (step + 1) % 128;
+      nextTime += sixteenth;
+    }
+  }
+
+  function stop() {
+    playing = false;
+    window.clearInterval(timer);
+    timer = null;
+    if (ctx && master) {
+      var now = ctx.currentTime;
+      master.gain.cancelScheduledValues(now);
+      master.gain.setTargetAtTime(0, now, 0.015);
+      sources.forEach(function (source) {
+        try { source.stop(now + 0.06); } catch (error) { /* already stopped */ }
+      });
+    }
+    notify();
+    return false;
+  }
+
+  async function start() {
+    if (!AudioContextClass) { lastError = '当前浏览器不支持这段合成 BGM。'; notify(); return false; }
+    if (playing) return true;
+    if (startPromise) return startPromise;
+    startPromise = (async function () {
+      try {
+        setup();
+        await ctx.resume();
+        if (document.hidden || ctx.state !== 'running') return false;
+        lastError = '';
+        playing = true;
+        step = 0;
+        nextTime = ctx.currentTime + 0.065;
+        master.gain.cancelScheduledValues(ctx.currentTime);
+        master.gain.setTargetAtTime(0.38, ctx.currentTime, 0.04);
+        schedule();
+        timer = window.setInterval(schedule, 70);
+        notify();
+        return true;
+      } catch (error) {
+        lastError = 'BGM 没能启动，可以再点一次音乐按钮。';
+        stop();
+        return false;
+      } finally { startPromise = null; }
+    }());
+    return startPromise;
+  }
+
+  document.addEventListener('visibilitychange', function () { if (document.hidden && playing) stop(); });
+  window.addEventListener('pagehide', stop);
+  window.GiftMusic = {
+    start: start,
+    stop: stop,
+    toggle: async function () { return playing ? stop() : start(); },
+    isPlaying: function () { return playing; },
+    supported: !!AudioContextClass,
+    get error() { return lastError; }
+  };
+}());
+
+</script>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),canvas=$('universe'),ctx=canvas.getContext('2d');
+if(!ctx){document.body.classList.add('fallback');return;}
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobile=innerWidth<650,N=mobile?2400:4000,TAU=Math.PI*2;
+let W=0,H=0,S=1,DPR=1,time=0,last=0,started=false,paused=reduced,sceneTime=0,index=0,busy=false;
+let pointer={x:0,y:0,active:false},flash=0,pulse=0;
+const rand=(a,b)=>a+Math.random()*(b-a),lerp=(a,b,t)=>a+(b-a)*t;
+const scenes=[
+ {shape:'name',tag:'TARGET LOCKED / 烟成果专属宇宙',line:'烟成果，请接收宇宙级精神攻击。',sub:'阿月负责胡说八道，阿团负责奶茶报销。',hue:185},
+ {shape:'heart',tag:'心情充电中 / 不接受退款',line:'知识可能进不去，奶茶必须进得去。',sub:'烟成果同学：先吃饭，人又不是太阳能的。',hue:310},
+ {shape:'phone',tag:'PHONE DETECTED / 放下那个小方块',line:'烟成果，手机又不会考研。',sub:'你替它着什么急！让它自己冷静五分钟。',hue:205},
+ {shape:'tea',tag:'MILK TEA DELIVERY / 阿团钱包预警',line:'恭喜烟成果：今天没被题目吃掉！',sub:'奖励申请已受理，请自行向阿团索取奶茶。',hue:32},
+ {shape:'name',tag:'MAIN CHARACTER / 主角返场',line:'别的先不说，烟成果这个排面必须有。',sub:'宇宙可以转，阿团的奶茶欠条不能转移。',hue:265},
+ {shape:'win',tag:'LOADING GOOD NEWS / 好消息缓冲中',line:'祝烟成果：做的都会，蒙的也对。',sub:'再加一条：好好睡觉，奶茶永远多加料。',hue:170}
+];
+const particles=Array.from({length:N},(_,i)=>({x:rand(-700,700),y:rand(-450,450),z:rand(-500,500),vx:0,vy:0,vz:0,r:rand(.65,1.7),seed:rand(0,TAU),h:i%4}));
+let stars=[],bursts=[];const shapes={};
+function resize(){W=innerWidth;H=innerHeight;DPR=Math.min(devicePixelRatio||1,2);canvas.width=W*DPR;canvas.height=H*DPR;canvas.style.width=W+'px';canvas.style.height=H+'px';ctx.setTransform(DPR,0,0,DPR,0,0);S=Math.min(W/1170,H/900);stars=Array.from({length:mobile?95:180},()=>({x:Math.random()*W,y:Math.random()*H,z:rand(.2,1),p:rand(0,TAU)}));}
+addEventListener('resize',resize);resize();
+const sample=document.createElement('canvas');sample.width=1100;sample.height=650;const sc=sample.getContext('2d',{willReadFrequently:true});
+function sampleShape(type){sc.clearRect(0,0,1100,650);sc.fillStyle='#fff';sc.strokeStyle='#fff';sc.textAlign='center';sc.textBaseline='middle';sc.lineCap='round';sc.lineJoin='round';
+ if(type==='name'||type==='phone'||type==='win'){sc.font=`900 ${type==='phone'?210:300}px "Microsoft YaHei","PingFang SC",sans-serif`;sc.fillText(type==='name'?'烟成果':type==='phone'?'放下手机':'稳稳上岸',550,315,1020);}
+ if(type==='heart'){sc.save();sc.translate(550,320);sc.scale(17,17);sc.beginPath();for(let a=0;a<TAU;a+=.02){let x=16*Math.pow(Math.sin(a),3),y=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a));if(!a)sc.moveTo(x,y);else sc.lineTo(x,y);}sc.closePath();sc.fill();sc.restore();}
+ if(type==='tea'){sc.lineWidth=13;sc.beginPath();sc.moveTo(420,180);sc.lineTo(450,505);sc.quadraticCurveTo(550,535,650,505);sc.lineTo(680,180);sc.closePath();sc.stroke();sc.beginPath();sc.ellipse(550,180,131,26,0,0,TAU);sc.stroke();sc.lineWidth=19;sc.beginPath();sc.moveTo(580,195);sc.lineTo(638,50);sc.lineTo(697,50);sc.stroke();sc.lineWidth=6;sc.beginPath();sc.moveTo(447,290);sc.quadraticCurveTo(550,265,655,292);sc.stroke();[[481,438],[526,462],[571,428],[613,470],[550,500],[490,491],[615,404]].forEach(([x,y])=>{sc.beginPath();sc.arc(x,y,15,0,TAU);sc.fill()});sc.font='bold 50px "Microsoft YaHei",sans-serif';sc.fillText('奶茶续命',550,350);}
+ const data=sc.getImageData(0,0,1100,650).data,points=[];
+ for(let y=0;y<650;y+=4)for(let x=0;x<1100;x+=4)if(data[(y*1100+x)*4+3]>100)points.push({x:x-550,y:y-325});
+ for(let i=points.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[points[i],points[j]]=[points[j],points[i]];}
+ return Array.from({length:N},(_,i)=>{let p=points[i%points.length]||{x:0,y:0};return{x:p.x+rand(-1.8,1.8),y:p.y+rand(-1.8,1.8),z:rand(-23,23)};});}
+['name','heart','tea','phone','win'].forEach(type=>shapes[type]=sampleShape(type));
+let target=shapes.name;
+let toastTimer;function toast(text){$('toast').textContent=text;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),4200);}
+function burst(x,y,power=1){if(reduced)return;for(let i=0;i<(mobile?55:100)*power;i++){let a=Math.random()*TAU,v=rand(1,6)*power;bursts.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,life:1,r:rand(1,2.5),h:rand(170,320)});}}
+function scatter(power=1){if(reduced)return;particles.forEach(p=>{p.vx+=rand(-24,24)*power;p.vy+=rand(-20,20)*power;p.vz+=rand(-18,18)*power;});flash=.13;pulse=1;burst(W/2,H*.41,1.5);}
+function setScene(next){if(busy)return;busy=true;index=(next+scenes.length)%scenes.length;sceneTime=0;const scene=scenes[index];$('caption').classList.add('changing');scatter(.75);target=shapes[scene.shape];if(paused)particles.forEach((p,i)=>{Object.assign(p,target[i]);p.vx=p.vy=p.vz=0;});setTimeout(()=>{$('tag').textContent=scene.tag;$('line').textContent=scene.line;$('subline').textContent=scene.sub;$('caption').classList.remove('changing');busy=false;if(reduced)draw(0);},350);}
+function project(x,y,z){const persp=1100/(1100+z);return{x:W/2+x*S*persp,y:H*.42+y*S*persp,k:persp};}
+function draw(dt){
+ ctx.globalCompositeOperation='source-over';ctx.fillStyle='#060612';ctx.fillRect(0,0,W,H);
+ const aura=ctx.createRadialGradient(W/2,H*.42,0,W/2,H*.42,Math.max(W,H)*.6);aura.addColorStop(0,'rgba(35,29,87,.37)');aura.addColorStop(.45,'rgba(17,27,57,.22)');aura.addColorStop(1,'rgba(6,6,18,0)');ctx.fillStyle=aura;ctx.fillRect(0,0,W,H);
+ ctx.globalCompositeOperation='lighter';
+ stars.forEach(s=>{let a=.18+(Math.sin(time*.5+s.p)+1)*.18;ctx.fillStyle=`rgba(174,196,255,${a})`;ctx.fillRect(s.x+Math.sin(time*.1+s.p)*5,s.y,s.z*1.7,s.z*1.7);});
+ const t=time*.2,rot=scenes[index].shape==='name'||scenes[index].shape==='phone'||scenes[index].shape==='win'?Math.sin(t)*.10:Math.sin(t)*.22;
+ const ry=rot+pointer.x*.055,rx=Math.sin(time*.32)*.025+pointer.y*.025,cy=Math.cos(ry),sy=Math.sin(ry),cx=Math.cos(rx),sx=Math.sin(rx);
+ const hue=scenes[index].hue;
+ // Two tilted, rotating streams of stardust orbit the particle sculpture.
+ if(!reduced)for(let ring=0;ring<2;ring++){const count=mobile?190:330;for(let j=0;j<count;j++){let a=j/count*TAU+time*(ring?-.19:.14),r=530+Math.sin(j*9.4)*45;let x=Math.cos(a)*r,y=Math.sin(a)*r*.23,z=Math.sin(a)*r*.65;const tilt=ring?-.35:.35;let xx=x*Math.cos(tilt)-y*Math.sin(tilt),yy=x*Math.sin(tilt)+y*Math.cos(tilt);let q=project(xx,yy+30,z);ctx.fillStyle=`hsla(${hue+ring*45},90%,78%,${.12+(.5+.5*Math.sin(j+time))*.22})`;ctx.beginPath();ctx.arc(q.x,q.y,Math.max(.5,S*q.k*1.35),0,TAU);ctx.fill();}}
+ const palettes=[`hsla(${hue},95%,81%,.86)`,`hsla(${hue+23},100%,88%,.92)`,`hsla(${hue+62},95%,77%,.73)`,'rgba(241,250,255,.94)'];
+ for(let i=0;i<N;i++){const p=particles[i],q=target[i];
+  if(!paused){const factor=Math.min(dt*60,2);p.vx+=(q.x-p.x)*.016*factor;p.vy+=(q.y-p.y)*.016*factor;p.vz+=(q.z-p.z)*.016*factor;p.vx*=Math.pow(.81,factor);p.vy*=Math.pow(.81,factor);p.vz*=Math.pow(.81,factor);p.x+=p.vx*factor;p.y+=p.vy*factor;p.z+=p.vz*factor;}
+  if(reduced){p.x=q.x;p.y=q.y;p.z=q.z;}
+  let x=p.x*cy-p.z*sy,z=p.x*sy+p.z*cy,y=p.y*cx-z*sx;z=p.y*sx+z*cx;
+  const drift=reduced?0:Math.sin(time*1.1+p.seed)*2.5;let pp=project(x+drift,y+Math.cos(time+p.seed)*1.5,z);let r=Math.max(.45,p.r*S*pp.k)*(1+pulse*.18);
+  ctx.fillStyle=palettes[p.h];ctx.beginPath();ctx.arc(pp.x,pp.y,r,0,TAU);ctx.fill();
+  if(i%17===0){ctx.fillStyle=`hsla(${hue},100%,75%,.08)`;ctx.beginPath();ctx.arc(pp.x,pp.y,r*5,0,TAU);ctx.fill();}
+ }
+ bursts=bursts.filter(b=>b.life>0);for(const b of bursts){if(!paused){b.x+=b.vx*dt*60;b.y+=b.vy*dt*60;b.vy+=.022*dt*60;b.life-=dt*.65;}ctx.fillStyle=`hsla(${b.h},100%,80%,${Math.max(0,b.life)})`;ctx.beginPath();ctx.arc(b.x,b.y,b.r*Math.max(0,b.life),0,TAU);ctx.fill();}
+ if(flash>0){ctx.fillStyle=`rgba(156,177,255,${flash})`;ctx.fillRect(0,0,W,H);flash=Math.max(0,flash-dt*.5);}pulse=Math.max(0,pulse-dt);
+ ctx.globalCompositeOperation='source-over';
+}
+function animate(now){const dt=last?Math.min((now-last)/1000,.045):1/60;last=now;if(!document.hidden){if(!paused){time+=dt;if(started){sceneTime+=dt;if(sceneTime>8.6)setScene(index+1);}}draw(dt);}requestAnimationFrame(animate);}
+// Show the name immediately, then keep all transitions inside one continuous universe.
+particles.forEach((p,i)=>{p.x=target[i].x;p.y=target[i].y;p.z=target[i].z;});requestAnimationFrame(animate);
+async function enter(withMusic){if(started)return;started=true;$('gate').classList.add('dismissed');scatter(.8);if(withMusic&&window.GiftMusic){const ok=await GiftMusic.start();if(!ok)toast('声音暂时没打开，可以再点右上角音乐。');}if(reduced)toast('已按你的系统设置减少动态效果；可以点“换个花样”。');}
+$('enter').onclick=()=>enter(true);$('silent').onclick=()=>enter(false);
+$('next').onclick=()=>setScene(index+1);$('boom').onclick=()=>{scatter(1.65);if(paused&&!reduced){paused=false;$('pause').textContent='Ⅱ 暂停';$('pause').setAttribute('aria-pressed','false');}toast(['烟成果，排面拉满！','这一炸，炸走今天的烦恼。','阿团钱包受到 100 点奶茶伤害。'][Math.floor(Math.random()*3)]);};
+$('pause').textContent=paused?'▶ 继续':'Ⅱ 暂停';$('pause').setAttribute('aria-pressed',String(paused));$('pause').onclick=()=>{paused=!paused;$('pause').textContent=paused?'▶ 继续':'Ⅱ 暂停';$('pause').setAttribute('aria-pressed',String(paused));};
+$('sound').onclick=async()=>{if(window.GiftMusic){const ok=await GiftMusic.toggle();if(!ok&&GiftMusic.error)toast('浏览器暂时没有打开声音，动画照常玩。');}};
+addEventListener('giftmusicchange',event=>{$('sound').textContent=event.detail.playing?'♫ 音乐开':'♫ 音乐关';$('sound').setAttribute('aria-pressed',String(event.detail.playing));});
+$('fullscreen').onclick=async()=>{try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen();else await document.exitFullscreen();}catch{toast('这个浏览器不支持网页全屏，横屏看也很有排面。');}};
+canvas.addEventListener('pointermove',e=>{pointer.x=(e.clientX/W-.5)*2;pointer.y=(e.clientY/H-.5)*2;});canvas.addEventListener('pointerleave',()=>{pointer.x=pointer.y=0;});canvas.addEventListener('pointerdown',e=>{if(started)burst(e.clientX,e.clientY,1);});canvas.addEventListener('dblclick',()=>{scatter(2);toast('隐藏成就：烟成果拥有本宇宙最终解释权。奶茶欠条永久有效。');});
+let dialogPause=false;document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>{dialogPause=paused;paused=true;$(b.dataset.open).showModal();});document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());document.querySelectorAll('dialog').forEach(d=>d.addEventListener('close',()=>{paused=dialogPause;}));
+addEventListener('keydown',e=>{if(e.target.matches('textarea,input,button,a,select')||document.querySelector('dialog[open]')||!started)return;if(e.code==='Space'){e.preventDefault();setScene(index+1);}if(e.key.toLowerCase()==='m')$('sound').click();});
+$('copy').onclick=async()=>{const input=$('words'),text=input.value.trim();if(!text){$('noteStatus').textContent='烟成果请开麦，先写一句。';input.focus();return;}let copied=false;try{await navigator.clipboard.writeText('烟成果给阿月：\n'+text);copied=true;}catch{input.focus();input.select();try{copied=document.execCommand('copy');}catch{}}$('noteStatus').textContent=copied?'已复制。由你转发；这个页面没有把留言发送给 ChatGPT。':'请手动复制选中的字，再转发给朋友或贴到 ChatGPT 对话里。';};
+let rounds=0,claims=0;try{const s=JSON.parse(localStorage.getItem('chengguo-particle-v1')||'{}');rounds=Number.isSafeInteger(s.rounds)&&s.rounds>=0?s.rounds:0;claims=Number.isSafeInteger(s.claims)&&s.claims>=0?s.claims:0;}catch{}
+function reward(){const count=rounds%4,available=Math.max(0,Math.floor(rounds/4)-claims);$('stars').textContent='★'.repeat(available&&count===0?4:count)+'☆'.repeat(available&&count===0?0:4-count);$('rewardText').textContent=available?'烟成果的虚拟奶茶券 × '+available+'，阿团准备接单！':'已攒 '+count+' / 4 轮。奶茶的解释权归烟成果所有。';$('claim').disabled=!available;try{localStorage.setItem('chengguo-particle-v1',JSON.stringify({rounds,claims}));}catch{}}
+let clockTimer=null,mode='idle',end=0;function stopClock(){clearInterval(clockTimer);clockTimer=null;mode='idle';$('focus').disabled=false;$('finish').disabled=true;$('rest').disabled=false;}
+function displayClock(s){$('clock').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0');}
+function finish(){if(mode!=='focus')return;stopClock();rounds++;reward();displayClock(300);$('timerStatus').textContent='这轮已记好。阿月批准你休息一下。';}
+function run(type,seconds){stopClock();mode=type;end=Date.now()+seconds*1000;$('focus').disabled=true;$('finish').disabled=type!=='focus';$('rest').disabled=true;displayClock(seconds);$('timerStatus').textContent=type==='focus'?'手机请自行冷静，烟成果正在营业。':'喝水、伸懒腰、合法发呆。';clockTimer=setInterval(()=>{const s=Math.max(0,Math.ceil((end-Date.now())/1000));displayClock(s);if(!s){if(mode==='focus')finish();else{stopClock();displayClock(1500);$('timerStatus').textContent='休息好了再开始，阿月不催。';}}},500);}
+$('focus').onclick=()=>run('focus',1500);$('rest').onclick=()=>run('break',300);$('finish').onclick=finish;$('stop').onclick=()=>{stopClock();displayClock(1500);$('timerStatus').textContent='已停止计时，先歇歇也可以。';};$('claim').onclick=()=>{if(Math.floor(rounds/4)>claims){claims++;reward();toast('虚拟奶茶券已领取！请凭你的名字向阿团理直气壮地索取。');}};reward();
+})();
+</script>
+</body>
+</html>
